@@ -10,8 +10,11 @@
     </style>
   </head>
   <body>
-    <main id="game">
-      <section id="stats">
+    <main id="game" role="main" aria-labelledby="gameTitle">
+      <h1 id="gameTitle" class="sr-only">Universal Knight — RPG</h1>
+      <!-- Instructions for screen readers -->
+      <p class="sr-only">Use the controls to visit locations, buy items, and fight monsters.</p>
+  <section id="stats" role="region" aria-label="Player statistics">
         <span class="stat xp"
           >XP: <strong><span id="xpText">0</span></strong></span
         >
@@ -22,10 +25,10 @@
           >Gold: <strong><span id="goldText">50</span></strong></span
         >
       </section>
-      <section id="controls">
-        <button id="button1">Go to store</button>
-        <button id="button2">Go to cave</button>
-        <button id="button3">Fight dragon</button>
+      <section id="controls" role="toolbar" aria-label="Game actions">
+        <button id="button1" type="button">Go to store</button>
+        <button id="button2" type="button">Go to cave</button>
+        <button id="button3" type="button">Fight dragon</button>
       </section>
       <section id="monsterStats">
         <span class="stat"
@@ -35,7 +38,7 @@
           >Health: <strong><span id="monsterHealth"></span></strong
         ></span>
       </section>
-      <section id="text">
+  <section id="text" role="status" aria-live="polite">
         In a world where elemental forces govern the balance of life, a chosen
         warrior must embark on a perilous journey to prevent the unraveling of
         reality.
