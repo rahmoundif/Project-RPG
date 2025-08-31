@@ -18,11 +18,13 @@ body {
   background: var(--bg);
   color: #fff;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* prevent horizontal scroll on mobile */
 }
 
 #game {
-  width: min(96vw, 800px);
-  margin: 24px auto;
+  width: 100%; /* fill viewport width */
+  max-width: 800px; /* constrain on larger screens */
+  margin: clamp(8px, 4vh, 24px) auto; /* adaptive vertical spacing */
   padding: 12px;
   border-radius: 10px;
   border: 4px solid var(--accent);
@@ -32,8 +34,9 @@ body {
 
 #stats {
   display: flex;
+  flex-wrap: wrap; /* allow wrapping on narrow screens */
   gap: 8px;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   padding: 8px;
   border-bottom: 2px solid var(--accent);
@@ -48,6 +51,8 @@ body {
   font-weight: 700;
   font-size: 1rem;
   color: #0a0a23;
+  flex: 1 1 calc(33% - 8px); /* three per row, can wrap */
+  min-width: 140px; /* prevents overly narrow shrink */
 }
 
 .xp {
@@ -70,6 +75,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 10px;
+  width: 100%;
 }
 
 button {
@@ -131,6 +137,14 @@ button {
     min-width: 150px;
     padding: 12px 18px;
   }
+}
+
+@media (max-width: 480px) {
+  .stat { flex: 1 1 100%; font-size: 0.85rem; padding: 4px 6px; }
+  #stats { gap: 4px; }
+  #controls { flex-direction: column; gap: 12px; align-items: stretch; }
+  #controls button { width: 100%; min-width: 0; }
+  #text { padding: 12px; font-size: 0.95rem; }
 }
 
 @media (min-width: 900px) {
