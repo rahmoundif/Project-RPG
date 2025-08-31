@@ -1,0 +1,82 @@
+body {
+  background-color: #000000;
+}
+
+#text {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 30px;
+}
+
+#game {
+  border-radius: 7px;
+  border: solid 5px rgb(112, 3, 255);
+  max-width: 500px;
+  max-height: 400px;
+  color: #ffffff;
+  margin: 50px auto 0px;
+  padding: 10px;
+}
+
+#controls,
+#stats {
+  border-bottom: solid 2px #7003ff;
+  border-radius: 5px;
+  padding: 10px;
+  color: #0a0a23;
+  text-align: center;
+}
+
+#monsterStats {
+  display: none;
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #c70d0d;
+}
+
+#stats {
+  padding-right: 10px;
+  font-family: "Jersey 10", sans-serif;
+  font-size: x-large;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  color: #fbfbfd;
+  background-color: #7003ff;
+  border: 3px solid white;
+  opacity: 60%;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+button:hover {
+  background-color: aqua;
+  color: #000000;
+  font-weight: bold;
+  opacity: 100%;
+}
+
+.xp {
+  background: rgb(236, 3, 186);
+  border-radius: 5px;
+  border: solid 3px white;
+  padding: 0 10px;
+}
+
+.health {
+  background: rgb(1, 250, 43);
+  border-radius: 5px;
+  border: solid 3px white;
+  padding: 0 10px;
+}
+
+.gold {
+  background: rgb(252, 214, 2);
+  border-radius: 5px;
+  border: solid 3px white;
+  padding: 0 10px;
+}
